@@ -2,26 +2,98 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@layer base {
+ :root {
+  --background: 224.4 100% 100%;
+  --foreground: 224.4 5% 10%;
+  --card: 224.4 50% 100%;
+  --card-foreground: 224.4 5% 15%;
+  --popover: 224.4 100% 100%;
+  --popover-foreground: 224.4 100% 10%;
+  --primary: 224.4 64.3% 32.9%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 224.4 30% 90%;
+  --secondary-foreground: 0 0% 0%;
+  --muted: 186.4 30% 95%;
+  --muted-foreground: 224.4 5% 40%;
+  --accent: 186.4 30% 90%;
+  --accent-foreground: 224.4 5% 15%;
+  --destructive: 0 100% 50%;
+  --destructive-foreground: 224.4 5% 100%;
+  --border: 224.4 30% 82%;
+  --input: 224.4 30% 50%;
+  --ring: 224.4 64.3% 32.9%;
+  --radius: 1rem;
+ }
+
+  .dark {
+  --background: 224.4 50% 7%;
+  --foreground: 224.4 5% 90%;
+  --card: 224.4 50% 7%;
+  --card-foreground: 224.4 5% 90%;
+  --popover: 224.4 50% 5%;
+  --popover-foreground: 224.4 5% 90%;
+  --primary: 224.4 64.3% 32.9%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 224.4 30% 10%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 186.4 30% 15%;
+  --muted-foreground: 224.4 5% 60%;
+  --accent: 186.4 30% 15%;
+  --accent-foreground: 224.4 5% 90%;
+  --destructive: 0 100% 30%;
+  --destructive-foreground: 224.4 5% 90%;
+  --border: 224.4 30% 18%;
+  --input: 224.4 30% 18%;
+  --ring: 224.4 64.3% 32.9%;
+  --radius: 1rem;
+ }
+}
+
+
+
+@layer base {
+  :root {
+    --sidebar-background: 224.4 30% 95%; /* Sidebar claro, más oscuro que el fondo general */
+    --sidebar-foreground: 224.4 5% 10%; /* Texto oscuro en el sidebar */
+    --sidebar-primary: 224.4 64.3% 32.9%; /* Color principal del sidebar */
+    --sidebar-primary-foreground: 0 0% 100%; /* Texto principal claro */
+    --sidebar-accent: 186.4 30% 90%; /* Color de acento del sidebar */
+    --sidebar-accent-foreground: 224.4 5% 15%; /* Texto de acento */
+    --sidebar-border: 224.4 30% 82%; /* Bordes suaves en el sidebar */
+    --sidebar-ring: 224.4 64.3% 32.9%; /* Color del anillo activo */
+  }
+
+  .dark {
+    --sidebar-background: 224.4 30% 10%; /* Sidebar oscuro, más oscuro que el fondo general */
+    --sidebar-foreground: 224.4 5% 90%; /* Texto claro en el sidebar */
+    --sidebar-primary: 224.4 64.3% 32.9%; /* Color principal del sidebar */
+    --sidebar-primary-foreground: 0 0% 100%; /* Texto principal claro */
+    --sidebar-accent: 186.4 30% 15%; /* Color de acento del sidebar */
+    --sidebar-accent-foreground: 224.4 5% 90%; /* Texto de acento claro */
+    --sidebar-border: 224.4 30% 18%; /* Bordes suaves oscuros */
+    --sidebar-ring: 224.4 64.3% 32.9%; /* Color del anillo activo */
+  }
+}
+
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
   }
 }
